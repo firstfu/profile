@@ -34,42 +34,45 @@ const ProjectsData = [
 
 export default function Projects() {
   return (
-    <div className="py-14 dark:bg-black dark:text-white ">
-      <div className="container ">
-        <header className="flex justify-between items-center mb-8">
-          <div className="uppercase ">
-            <h1 className="text-3xl font-bold">Featured Projects</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur.</p>
-          </div>
-          <div className="bg-primary  hover:bg-primary/80 duration-300 py-2 px-6 text-white">
-            <button>View All</button>
-          </div>
-        </header>
+    <>
+      <span id="project"></span>
+      <div className="py-14 dark:bg-black dark:text-white">
+        <div className="container ">
+          <header className="flex justify-between items-center mb-8">
+            <div className="uppercase ">
+              <h1 className="text-3xl font-bold">Featured Projects</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur.</p>
+            </div>
+            <div className="bg-primary  hover:bg-primary/80 duration-300 py-2 px-6 text-white">
+              <button>View All</button>
+            </div>
+          </header>
 
-        {/* card section */}
-        <section>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 gap">
-            {/* cards */}
-            {ProjectsData.map(project => {
-              return (
-                <div>
+          {/* card section */}
+          <section>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* cards */}
+              {ProjectsData.map(project => {
+                return (
                   <div>
-                    <img src={project.image} alt="" />
-                  </div>
-                  <div className="pt-4 space-y-3">
-                    <h1 className="text-3xl font-bold">{project.name}</h1>
-                    <div>
-                      <a href={project.link} className="text-primary text-3xl uppercase">
-                        Know More
-                      </a>
+                    <div className="h-[340px] sm:h-[440px] w-full bg-dark/80 grid place-items-center p-3 sm:p-6">
+                      <img src={project.image} alt="" />
+                    </div>
+                    <div className="pt-4 space-y-3">
+                      <h1 className="text-3xl font-bold">{project.name}</h1>
+                      <div>
+                        <a href={project.link} className="text-primary uppercase">
+                          Know More
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
+                );
+              })}
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

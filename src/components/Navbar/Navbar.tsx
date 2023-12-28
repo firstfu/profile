@@ -1,11 +1,12 @@
+/* eslint-disable react-refresh/only-export-components */
 // import React from "react";
 
 import DarkMode from "./DarkMode";
 
-const NavLinks = [
+export const NavLinks = [
   {
     id: 1,
-    name: "Home",
+    name: "HOME",
     link: "/#",
   },
   {
@@ -14,15 +15,15 @@ const NavLinks = [
     link: "/#project",
   },
   {
-    id: 3,
+    id: 1,
     name: "ABOUT",
     link: "/#about",
   },
-  //   {
-  //     id: 4,
-  //     name: "CONTACT",
-  //     link: "/#contact",
-  //   },
+  {
+    id: 1,
+    name: "CONTACT",
+    link: "/#contact",
+  },
 ];
 
 export default function Navbar() {
